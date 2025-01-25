@@ -34,3 +34,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func die():
 	get_tree().change_scene_to_file("res://scenes/endScreen/EndScreen.tscn")
+	self.queue_free()

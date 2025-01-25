@@ -3,7 +3,7 @@ extends CharacterBody2D
 var damage = 15
 var speed = 250
 var player
-
+  
 func _ready() -> void:
 	var main = get_parent()
 	player = main.get_node("Player")
