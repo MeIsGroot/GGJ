@@ -1,14 +1,12 @@
 extends Node2D
 
-
 @onready var timer = $Timer
-@onready var player = $Player
-@onready var screensize = get_viewport_rect().size
+@onready var player
 
 var count = 0
 var rng = RandomNumberGenerator.new()
 var enemy_scene = preload("res://bubble_enemy.tscn")  # Preload once for efficiency
-var spawn_margin = 100  # Distance outside the screen for spawning
+var min_margin = 3000
 
 
 func _ready() -> void:
@@ -20,15 +18,26 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timeout():
+	player = $Player
 	if count < 50:
 		# Generate spawn position outside the viewable area
-		var spawn_position = get_spawn_outside_viewable_area()
+		var posx = player.global_position.x
+		var posy = player.global_position.y
+		
+		var randx = RandomNumberGenerator.new().randf_range(posx-min_margin, posx+min_margin)
+		var randy = RandomNumberGenerator.new().randf_range(posy-min_margin, posy+min_margin)
+		
+		while(randx - randx > min_margin or posx - randx > min_margin):
+			randx = RandomNumberGenerator.new().randf_range(posx-min_margin, posx+min_margin)
+		
+		while(randy - randy > min_margin or posy - randy > min_margin):
+			randy = RandomNumberGenerator.new().randf_range(posy-min_margin, posy+min_margin)
 		
 		# Instantiate and configure the enemy
 		var enemy = enemy_scene.instantiate()
-		enemy.position = spawn_position
-		add_child(enemy)
+		enemy.position = Vector2(randx, randy)
 		
+		add_child(enemy)
 		if enemy.has_method("start"):
 			enemy.start()
 		
@@ -37,23 +46,3 @@ func _on_timeout():
 		timer.start()
 	else:
 		pass
-
-func get_spawn_outside_viewable_area() -> Vector2:
-	# Get a random side: top, bottom, left, or right
-	var side = rng.randi_range(0, 3)
-	var x
-	var y
-	if side == 0:  # Top
-		x = rng.randf_range(-spawn_margin, screensize.x + spawn_margin)
-		y = -spawn_margin
-	elif side == 1:  # Bottom
-		x = rng.randf_range(-spawn_margin, screensize.x + spawn_margin)
-		y = screensize.y + spawn_margin
-	elif side == 2:  # Left
-		x = -spawn_margin
-		y = rng.randf_range(-spawn_margin, screensize.y + spawn_margin)
-	elif side == 3:  # Right
-		x = screensize.x + spawn_margin
-		y = rng.randf_range(-spawn_margin, screensize.y + spawn_margin)
-	
-	return Vector2(x, y)

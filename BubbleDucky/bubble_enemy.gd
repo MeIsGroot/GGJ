@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var damage = 15
 var speed = 250
 var player
 
@@ -13,3 +14,13 @@ func _physics_process(delta):
 	var direction = (player_position - global_position).normalized()  # Get the direction
 	velocity = direction * speed  # Set the velocity to move towards the player
 	move_and_collide(velocity * delta)
+	
+func get_damage():
+	return damage
+
+func set_damage(number):
+	damage+=number
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	self.queue_free()

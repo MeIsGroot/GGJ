@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh41dsn30kkcf"]
+[gd_scene load_steps=3 format=3 uid="uid://dh41dsn30kkcf"]
 
 [ext_resource type="PackedScene" uid="uid://b0ok2o7ax35lh" path="res://Player.tscn" id="1_itwyn"]
 [ext_resource type="Script" path="res://main.gd" id="1_kmgiu"]
-[ext_resource type="PackedScene" uid="uid://du8j6rupqi7r1" path="res://bubble_enemy.tscn" id="3_w61fn"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kmgiu")
@@ -12,6 +11,3 @@ position = Vector2(1, -1)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="BubbleEnemy" parent="." instance=ExtResource("3_w61fn")]
-position = Vector2(-2498, -952)
