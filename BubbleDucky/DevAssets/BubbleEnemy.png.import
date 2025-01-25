@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhttbxu3rnmt5"
-path="res://.godot/imported/MainScreen.jpg-d4c5217ac51d1b43ceff9fa95c432260.ctex"
+uid="uid://bnevjf6o6trlg"
+path="res://.godot/imported/BubbleEnemy.png-e148a8907ec806493a8970d1e1efdf9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/MainScreen.jpg"
-dest_files=["res://.godot/imported/MainScreen.jpg-d4c5217ac51d1b43ceff9fa95c432260.ctex"]
+source_file="res://DevAssets/BubbleEnemy.png"
+dest_files=["res://.godot/imported/BubbleEnemy.png-e148a8907ec806493a8970d1e1efdf9d.ctex"]
 
 [params]
 
