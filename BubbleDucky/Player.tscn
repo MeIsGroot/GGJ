@@ -28,11 +28,6 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_swl2g")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 18)
-scale = Vector2(5.48289, 4.52665)
-polygon = PackedVector2Array(-22, -17, -22, 17, 19, 17, 19, -17)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -42,3 +37,6 @@ position = Vector2(-15, 27)
 scale = Vector2(9.71875, 9.71875)
 sprite_frames = SubResource("SpriteFrames_6710x")
 frame_progress = 0.161874
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 20, 8, 20, 8, -27, 18, -29, 20, -37, 47, -37, 47, -29, 58, -29, 58, -8, 77, -8, 77, 13, 69, 13, 69, 62, 58, 62, 58, 72, -78, 72, -78, 63, -90, 51, -98, 51, -98, -8, -70, -8, -55, 10, -9, 10, -9, 20)
