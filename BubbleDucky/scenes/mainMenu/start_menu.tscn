@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=3 uid="uid://bw1h07523eteq"]
+
+[ext_resource type="Script" path="res://scripts/mainMenu/start_menu.gd" id="1_ahxd5"]
+[ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_kk16u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a5g0"]
+bg_color = Color(0.14902, 0.729412, 0.909804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxmn4"]
+bg_color = Color(0.442836, 0.598377, 0.88283, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttd0c"]
+atlas = ExtResource("2_kk16u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue4s1"]
+atlas = ExtResource("2_kk16u")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6cvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttd0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue4s1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="TitleMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahxd5")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4a5g0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 71.0
+offset_top = 63.0
+offset_right = 378.0
+offset_bottom = 343.0
+theme_override_constants/separation = 20
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxmn4")
+text = "Start
+"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxmn4")
+text = "Options"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxmn4")
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 144.0
+offset_right = 908.0
+offset_bottom = 227.0
+theme_override_font_sizes/font_size = 50
+text = "Bubble Ducky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BubbleDucky" type="AnimatedSprite2D" parent="."]
+position = Vector2(718, 401)
+scale = Vector2(5.20313, 5.20313)
+sprite_frames = SubResource("SpriteFrames_l6cvw")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.587606
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
