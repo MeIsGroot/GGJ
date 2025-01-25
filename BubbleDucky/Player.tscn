@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0ok2o7ax35lh"]
+
+[ext_resource type="Texture2D" uid="uid://bfatjfjrmfh1v" path="res://DevAssets/BubbleDuck.png" id="1_0n16c"]
+[ext_resource type="Script" path="res://player.gd" id="1_swl2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf8i2"]
+atlas = ExtResource("1_0n16c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwcs6"]
+atlas = ExtResource("1_0n16c")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6710x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf8i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwcs6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_swl2g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 18)
+scale = Vector2(5.48289, 4.52665)
+polygon = PackedVector2Array(-22, -17, -22, 17, 19, 17, 19, -17)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+texture_filter = 1
+position = Vector2(-15, 27)
+scale = Vector2(9.71875, 9.71875)
+sprite_frames = SubResource("SpriteFrames_6710x")
+frame_progress = 0.161874
