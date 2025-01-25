@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://du8j6rupqi7r1"]
+
+[ext_resource type="Script" path="res://bubble_enemy.gd" id="1_0crc5"]
+[ext_resource type="Texture2D" uid="uid://bnevjf6o6trlg" path="res://DevAssets/BubbleEnemy.png" id="2_km2j8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b23w0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_km2j8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tl4u"]
+radius = 43.0
+
+[node name="BubbleEnemy" type="CharacterBody2D"]
+script = ExtResource("1_0crc5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, 12)
+scale = Vector2(5.375, 5.375)
+sprite_frames = SubResource("SpriteFrames_b23w0")
+frame_progress = 0.556889
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8tl4u")
+one_way_collision = true
