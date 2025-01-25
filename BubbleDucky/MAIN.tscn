@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh41dsn30kkcf"]
+[gd_scene load_steps=4 format=3 uid="uid://dh41dsn30kkcf"]
 
 [ext_resource type="PackedScene" uid="uid://b0ok2o7ax35lh" path="res://Player.tscn" id="1_itwyn"]
 [ext_resource type="PackedScene" uid="uid://dg1qgr4esnkde" path="res://BUBBLE.tscn" id="2_6vlh1"]
+[ext_resource type="PackedScene" uid="uid://dquh4ejdf057b" path="res://bubble_enemy.tscn" id="3_os8bo"]
 
 [node name="Main" type="Node2D"]
 
@@ -10,3 +11,7 @@ position = Vector2(45.9006, -2.14966)
 
 [node name="Bubble" parent="." instance=ExtResource("2_6vlh1")]
 position = Vector2(-178, -156)
+
+[node name="BubbleEnemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_os8bo")]
+position = Vector2(-292, -2)
+player = NodePath("../Player")
