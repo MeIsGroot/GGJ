@@ -13,11 +13,11 @@ func _process(delta):
 
 #Button press calls
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://main_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainGame/MAIN.tscn")
 
 
 func _on_options_pressed():
-	get_tree().change_scene_to_file("res://settings.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainMenu/settings.tscn")
 
 
 func _on_quit_pressed():

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4d1oef0utrdt"]
+[gd_scene load_steps=8 format=3 uid="uid://bw1h07523eteq"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_3j3j8"]
-[ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/BubbleDuck.png" id="1_4jd0p"]
+[ext_resource type="Script" path="res://scripts/mainMenu/start_menu.gd" id="1_ahxd5"]
+[ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_kk16u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a5g0"]
 bg_color = Color(0.14902, 0.729412, 0.909804, 1)
@@ -14,11 +14,11 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttd0c"]
-atlas = ExtResource("1_4jd0p")
+atlas = ExtResource("2_kk16u")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ue4s1"]
-atlas = ExtResource("1_4jd0p")
+atlas = ExtResource("2_kk16u")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l6cvw"]
@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3j3j8")
+script = ExtResource("1_ahxd5")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 1
