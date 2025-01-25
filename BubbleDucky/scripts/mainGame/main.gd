@@ -8,14 +8,10 @@ var rng = RandomNumberGenerator.new()
 var enemy_scene = preload("res://scenes/mainGame/bubble_enemy.tscn")  # Preload once for efficiency
 var min_margin = 3000
 
-
 func _ready() -> void:
 	count = 0
 	timer.timeout.connect(_on_timeout)
 	timer.start()  # Ensure the timer starts if not already configured in the editor
-
-func _process(delta: float) -> void:
-	pass
 
 func _on_timeout():
 	player = $Player

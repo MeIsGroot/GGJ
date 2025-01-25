@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 250
+const speed = 2500
 var health = 100.00
 var defence = 10
 var multiplier = 1
