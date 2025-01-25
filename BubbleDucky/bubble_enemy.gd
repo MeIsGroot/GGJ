@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-var speed = 25
+var speed = 125
 
 # Get player node
-@export var player : Node2D
+@onready var player = get_node("/Player")
 
 func _physics_process(delta):
 	# If a player exists, follow them
