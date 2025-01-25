@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0ok2o7ax35lh" path="res://Player.tscn" id="1_itwyn"]
 [ext_resource type="Script" path="res://main.gd" id="1_kmgiu"]
-[ext_resource type="PackedScene" uid="uid://du8j6rupqi7r1" path="res://bubble_enemy.tscn" id="3_w61fn"]
+[ext_resource type="PackedScene" uid="uid://dquh4ejdf057b" path="res://bubble_enemy.tscn" id="3_w61fn"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kmgiu")
@@ -15,3 +15,5 @@ autostart = true
 
 [node name="BubbleEnemy" parent="." instance=ExtResource("3_w61fn")]
 position = Vector2(-2498, -952)
+collision_layer = 2
+collision_mask = 2
