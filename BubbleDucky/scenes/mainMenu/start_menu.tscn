@@ -1,10 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw1h07523eteq"]
+[gd_scene load_steps=10 format=3 uid="uid://bw1h07523eteq"]
 
 [ext_resource type="Script" path="res://scripts/mainMenu/start_menu.gd" id="1_ahxd5"]
 [ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_kk16u"]
+[ext_resource type="Texture2D" uid="uid://ddfxir1oflorj" path="res://assets/backgrounds/WaterBG.png" id="2_y3rde"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a5g0"]
-bg_color = Color(0.14902, 0.729412, 0.909804, 1)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_np0db"]
+texture = ExtResource("2_y3rde")
+texture_region_size = Vector2i(320, 320)
+0:0/animation_columns = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_st5km"]
+tile_size = Vector2i(320, 320)
+sources/0 = SubResource("TileSetAtlasSource_np0db")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxmn4"]
 bg_color = Color(0.442836, 0.598377, 0.88283, 1)
@@ -44,14 +55,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ahxd5")
 
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4a5g0")
+[node name="WaterBG" type="TileMapLayer" parent="."]
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0)
+tile_set = SubResource("TileSet_st5km")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
