@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
-var speed = 125
+var speed = 500
+var player
 
-# Get player node
-@onready var player = get_node("/Player")
-
+func _ready() -> void:
+	var main = get_parent()
+	player = main.get_node("Player")
+	
 func _physics_process(delta):
 	# If a player exists, follow them
 	var player_position = player.global_position
