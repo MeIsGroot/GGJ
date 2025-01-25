@@ -22,6 +22,6 @@ func get_damage():
 func set_damage(number):
 	damage+=number
 
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	self.queue_free()
+	if(area.get_parent().has_node("Camera2D")):
+		self.queue_free()
