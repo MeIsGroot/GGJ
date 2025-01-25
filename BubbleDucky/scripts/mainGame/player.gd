@@ -23,14 +23,15 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func die():
-	self.queue_free()
-
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	damage = area.get_parent().get_damage()
 	health -= (damage * multiplier) - defence
 	$Health.value = health
 	print(health)
-	if(health < 0):
+	if(health <= 0):
+		self.queue_free()
 		die()
+
+func die():
+	
+	get_tree().change_scene_to_file("res://scenes/endScreen/EndScreen.tscn")

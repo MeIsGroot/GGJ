@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0jswxfiatoou"]
+[gd_scene load_steps=4 format=3 uid="uid://dh41dsn30kkcf"]
 
-[ext_resource type="PackedScene" uid="uid://b0ok2o7ax35lh" path="res://scenes/mainGame/Player.tscn" id="1_yjisv"]
-[ext_resource type="PackedScene" uid="uid://dg1qgr4esnkde" path="res://scenes/mainGame/BUBBLE.tscn" id="2_ke5ja"]
+[ext_resource type="Script" path="res://scripts/mainGame/main.gd" id="1_beppu"]
+[ext_resource type="PackedScene" uid="uid://c7d40rq3lde6v" path="res://scenes/mainGame/Player.tscn" id="1_itwyn"]
+[ext_resource type="Script" path="res://scripts/mainGame/player.gd" id="3_shure"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_beppu")
 
-[node name="Player" parent="." instance=ExtResource("1_yjisv")]
-position = Vector2(45.9006, -2.14966)
+[node name="Player" parent="." instance=ExtResource("1_itwyn")]
+position = Vector2(1, -1)
+script = ExtResource("3_shure")
 
-[node name="Bubble" parent="." instance=ExtResource("2_ke5ja")]
-position = Vector2(-178, -156)
+[node name="Timer" type="Timer" parent="."]
+autostart = true

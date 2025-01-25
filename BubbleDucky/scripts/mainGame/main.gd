@@ -5,7 +5,7 @@ extends Node2D
 
 var count = 0
 var rng = RandomNumberGenerator.new()
-var enemy_scene = preload("res://bubble_enemy.tscn")  # Preload once for efficiency
+var enemy_scene = preload("res://scenes/mainGame/bubble_enemy.tscn")  # Preload once for efficiency
 var min_margin = 3000
 
 

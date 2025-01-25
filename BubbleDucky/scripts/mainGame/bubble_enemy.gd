@@ -9,11 +9,12 @@ func _ready() -> void:
 	player = main.get_node("Player")
 
 func _physics_process(delta):
-	# If a player exists, follow them
-	var player_position = player.global_position
-	var direction = (player_position - global_position).normalized()  # Get the direction
-	velocity = direction * speed  # Set the velocity to move towards the player
-	move_and_collide(velocity * delta)
+	if player:
+		# If a player exists, follow them
+		var player_position = player.global_position
+		var direction = (player_position - global_position).normalized()  # Get the direction
+		velocity = direction * speed  # Set the velocity to move towards the player
+		move_and_collide(velocity * delta)
 	
 func get_damage():
 	return damage
