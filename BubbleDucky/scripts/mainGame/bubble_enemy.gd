@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var _animated_sprite = $Anim
 var damage = 15
 var speed = 250
+var health = 10
 var player
 
 func _ready() -> void:
@@ -21,13 +22,26 @@ func get_damage():
 
 func set_damage(number):
 	damage+=number
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
+	
+func pop(area):
 	area.get_parent().do_damage(damage)
 	$Anim.play("pop")
-	$PopTimer.start()
-	
+	$PopTimer.start()	
+
+func pop_w():
+	$Anim.play("pop")
+	$PopTimer.start()	
+
+func take_damage(damage):
+	self.health -= damage
+	if(self.health<=0):
+		pop_w()
 
 #timer to make sure pop anim plays
 func _on_pop_timer_timeout():
 	self.queue_free()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(area.get_parent().has_node("Camera2D")):
+		pop(area)

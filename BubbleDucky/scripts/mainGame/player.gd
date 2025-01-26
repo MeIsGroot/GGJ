@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 		position.y += speed * delta
 	if Input.is_action_pressed("KEY_W"):
 		position.y -= speed * delta
-	
+	if(!(Input.is_action_pressed("KEY_D") or Input.is_action_pressed("KEY_A") or Input.is_action_pressed("KEY_S") or Input.is_action_pressed("KEY_W"))):
+		velocity = Vector2(0, 0)
 	move_and_slide()
 
 func die():
@@ -31,6 +32,7 @@ func do_damage(damage):
 	health -= (damage * multiplier) - defence
 	$Health.value = health
 	print(health)
+	print()
 	if(health <= 0):
 		self.queue_free()
 		die()
