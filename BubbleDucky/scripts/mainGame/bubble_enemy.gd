@@ -3,7 +3,7 @@ extends CharacterBody2D
 var damage = 15
 var speed = 250
 var player
-
+  
 func _ready() -> void:
 	var main = get_parent()
 	player = main.get_node("Player")
@@ -23,5 +23,6 @@ func set_damage(number):
 	damage+=number
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if(area.get_parent().has_node("Camera2D")):
-		self.queue_free()
+	area.get_parent().do_damage(damage)
+	self.queue_free()
+	
