@@ -42,3 +42,7 @@ func _on_timeout():
 		timer.start()
 	else:
 		pass
+		
+func reduce_count():
+	count-=1
+	print("count:", count)

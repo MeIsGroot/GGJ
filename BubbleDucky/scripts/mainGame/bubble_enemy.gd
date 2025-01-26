@@ -29,11 +29,13 @@ func pop(area):
 	$Anim.play("pop")
 	area.get_parent().get_exp(exp)
 	$PopTimer.start()	
+	reduce_count()
 
 func pop_w():
 	$Anim.play("pop")
 	player.get_exp(exp)
 	$PopTimer.start()
+	reduce_count()
 
 func take_damage(damage):
 	self.health -= damage
@@ -48,3 +50,6 @@ func _on_pop_timer_timeout():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.get_parent().has_node("Camera2D")):
 		pop(area)
+		
+func reduce_count():
+	get_parent().reduce_count()

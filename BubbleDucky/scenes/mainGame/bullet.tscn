@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd2fgubwc2dyh"]
+[gd_scene load_steps=4 format=3 uid="uid://ont7kp58ltut"]
 
 [ext_resource type="Script" path="res://scripts/mainGame/bullet.gd" id="1_cwfii"]
 [ext_resource type="Texture2D" uid="uid://fkb5um37rh8u" path="res://DevAssets/WaterBullet.png" id="2_g2vu3"]

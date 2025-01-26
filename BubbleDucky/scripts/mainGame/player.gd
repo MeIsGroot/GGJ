@@ -56,3 +56,4 @@ func get_exp(exp):
 		$Experience.value = experience
 		$Level.text = "Level: " + str(level)
 		$Experience.max_value = exp_increments[level]
+	

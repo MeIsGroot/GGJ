@@ -7,7 +7,7 @@ var object_pos
 var penetration = 2
 var SPEED = 1000
 var RANGE = 1200
-var damage = 5
+var damage = 10
 
 func _physics_process(delta):
 	
