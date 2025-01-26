@@ -1,6 +1,6 @@
 extends Marker2D
 
-@onready var bullet = preload("res://bullet.tscn")
+@onready var bullet = preload("res://scenes/mainGame/bullet.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta: float) -> void:

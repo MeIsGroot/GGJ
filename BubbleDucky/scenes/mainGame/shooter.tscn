@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://mgxj8nsutm4v"]
 
-[ext_resource type="Script" path="res://shooter.gd" id="1_oai82"]
-[ext_resource type="Texture2D" uid="uid://dpcpybviqkjpv" path="res://assets/ducky/AimArrow.png" id="2_cblqe"]
-[ext_resource type="Script" path="res://marker_2d.gd" id="3_leqtp"]
+[ext_resource type="Script" path="res://scripts/mainGame/shooter.gd" id="1_oai82"]
+[ext_resource type="Texture2D" uid="uid://dpcpybviqkjpv" path="res://DevAssets/AimArrow.png" id="2_cblqe"]
+[ext_resource type="Script" path="res://scripts/mainGame/marker_2d.gd" id="3_leqtp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o0rqb"]
 radius = 2500.03
@@ -23,5 +23,5 @@ scale = Vector2(2.95687, 4.12968)
 texture = ExtResource("2_cblqe")
 
 [node name="Marker2D" type="Marker2D" parent="Marker2D/pointer"]
-position = Vector2(1.77859e-06, 14.529)
+position = Vector2(1.89181e-05, 17.9191)
 script = ExtResource("3_leqtp")
