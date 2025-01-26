@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhttbxu3rnmt5"
-path="res://.godot/imported/MainScreen.jpg-d4c5217ac51d1b43ceff9fa95c432260.ctex"
+uid="uid://fkb5um37rh8u"
+path="res://.godot/imported/WaterBullet.png-355788036a3bd224f209bc255a288ffa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/MainScreen.jpg"
-dest_files=["res://.godot/imported/MainScreen.jpg-d4c5217ac51d1b43ceff9fa95c432260.ctex"]
+source_file="res://DevAssets/WaterBullet.png"
+dest_files=["res://.godot/imported/WaterBullet.png-355788036a3bd224f209bc255a288ffa.ctex"]
 
 [params]
 

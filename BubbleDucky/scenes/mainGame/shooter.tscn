@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0x6i2kspcdu7"]
+
+[ext_resource type="Script" path="res://scripts/mainGame/shooter.gd" id="1_oai82"]
+[ext_resource type="Texture2D" uid="uid://dpcpybviqkjpv" path="res://DevAssets/AimArrow.png" id="2_cblqe"]
+[ext_resource type="Script" path="res://scripts/mainGame/marker_2d.gd" id="3_leqtp"]
+
+[node name="Shooter" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_oai82")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="pointer" type="Sprite2D" parent="Marker2D"]
+position = Vector2(131, 1.11413e-11)
+rotation = 1.5708
+scale = Vector2(2.95687, 4.12968)
+texture = ExtResource("2_cblqe")
+
+[node name="Marker2D" type="Marker2D" parent="Marker2D/pointer"]
+position = Vector2(1.89181e-05, 17.9191)
+script = ExtResource("3_leqtp")
