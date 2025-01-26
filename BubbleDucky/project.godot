@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 Difficulty="*res://global/Difficulty.gd"
 
+[display]
+
+window/size/mode=3
+window/size/borderless=true
+window/stretch/mode="viewport"
+
 [input]
 
 KEY_A={

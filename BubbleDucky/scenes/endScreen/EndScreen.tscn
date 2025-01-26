@@ -1,10 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp1dg5pe2fnt1"]
+[gd_scene load_steps=3 format=3 uid="uid://cp1dg5pe2fnt1"]
 
-[ext_resource type="Texture2D" uid="uid://cp3mep3a222wp" path="res://assets/endScene/db844tk-c65e6ebe-edd8-4ee3-88ac-27158c5616d1.png" id="1_3c3jk"]
+[ext_resource type="Script" path="res://scenes/endScreen/end_screen.gd" id="1_2xrx0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtjp8"]
+bg_color = Color(0, 0.673098, 0.773435, 1)
 
 [node name="EndScreen" type="Node2D"]
+script = ExtResource("1_2xrx0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(569.75, 327.5)
-scale = Vector2(0.564697, 0.317871)
-texture = ExtResource("1_3c3jk")
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 655.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtjp8")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 319.0
+offset_top = 20.0
+offset_right = 821.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "The End
+Good Run!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 286.0
+offset_top = 410.0
+offset_right = 869.0
+offset_bottom = 534.0
+theme_override_colors/icon_normal_color = Color(0.918183, 0.28506, 0.764966, 1)
+theme_override_font_sizes/font_size = 50
+text = "Back To Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

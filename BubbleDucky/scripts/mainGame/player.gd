@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 2500
+const speed = 1000
 var health = 100.00
 var defence = 10
 var level = 1
@@ -20,8 +20,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("KEY_D"):
 		position.x += speed * delta
+		$AnimatedSprite2D.flip_h = false
 	if Input.is_action_pressed("KEY_A"):
 		position.x -= speed * delta
+		$AnimatedSprite2D.flip_h = true
 	if Input.is_action_pressed("KEY_S"):
 		position.y += speed * delta
 	if Input.is_action_pressed("KEY_W"):
