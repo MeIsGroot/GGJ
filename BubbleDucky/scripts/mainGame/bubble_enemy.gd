@@ -3,6 +3,7 @@ extends CharacterBody2D
 var damage = 15
 var speed = 250
 var health = 10
+var exp = 20
 var player
 
 func _ready() -> void:
@@ -26,11 +27,13 @@ func set_damage(number):
 func pop(area):
 	area.get_parent().do_damage(damage)
 	$Anim.play("pop")
+	area.get_parent().get_exp(exp)
 	$PopTimer.start()	
 
 func pop_w():
 	$Anim.play("pop")
-	$PopTimer.start()	
+	player.get_exp(exp)
+	$PopTimer.start()
 
 func take_damage(damage):
 	self.health -= damage
