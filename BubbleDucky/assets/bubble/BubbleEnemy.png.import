@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfatjfjrmfh1v"
-path="res://.godot/imported/BubbleDuck.png-c16ef79b0408eaf9ef5863c7a9d0fd06.ctex"
+uid="uid://bnevjf6o6trlg"
+path="res://.godot/imported/BubbleEnemy.png-0cbbb19e1843016ec3e01de6f12bd1ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DevAssets/BubbleDuck.png"
-dest_files=["res://.godot/imported/BubbleDuck.png-c16ef79b0408eaf9ef5863c7a9d0fd06.ctex"]
+source_file="res://assets/bubble/BubbleEnemy.png"
+dest_files=["res://.godot/imported/BubbleEnemy.png-0cbbb19e1843016ec3e01de6f12bd1ff.ctex"]
 
 [params]
 

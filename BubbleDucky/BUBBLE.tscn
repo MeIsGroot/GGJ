@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dg1qgr4esnkde"]
 
-[ext_resource type="Texture2D" uid="uid://bnevjf6o6trlg" path="res://DevAssets/BubbleEnemy.png" id="1_qvjex"]
+[ext_resource type="Texture2D" uid="uid://bnevjf6o6trlg" path="res://assets/bubble/BubbleEnemy.png" id="1_qvjex"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmikx"]
 radius = 76.4199
