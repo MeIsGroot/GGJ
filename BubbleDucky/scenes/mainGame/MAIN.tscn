@@ -41,22 +41,22 @@ tile_set = SubResource("TileSet_ena7p")
 autostart = true
 
 [node name="Top" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
 shape = SubResource("WorldBoundaryShape2D_8fg3t")
 
 [node name="Bottom" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
 shape = SubResource("WorldBoundaryShape2D_ettxn")
 
 [node name="Left" type="StaticBody2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
 rotation = 1.5708
@@ -64,8 +64,8 @@ shape = SubResource("WorldBoundaryShape2D_0wll7")
 
 [node name="Right" type="StaticBody2D" parent="."]
 rotation = -1.5708
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
 shape = SubResource("WorldBoundaryShape2D_u1ias")
