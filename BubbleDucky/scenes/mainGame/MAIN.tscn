@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://dh41dsn30kkcf"]
+[gd_scene load_steps=10 format=4 uid="uid://dh41dsn30kkcf"]
 
 [ext_resource type="Script" path="res://scripts/mainGame/main.gd" id="1_beppu"]
 [ext_resource type="PackedScene" uid="uid://c7d40rq3lde6v" path="res://scenes/mainGame/Player.tscn" id="1_itwyn"]
@@ -19,6 +19,19 @@ tile_size = Vector2i(320, 320)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_hutpq")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8fg3t"]
+normal = Vector2(0, 1)
+distance = -4786.01
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ettxn"]
+distance = -4776.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0wll7"]
+distance = -9580.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u1ias"]
+distance = -9581.0
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_beppu")
 
@@ -29,9 +42,39 @@ tile_set = SubResource("TileSet_xj7eo")
 rendering_quadrant_size = 320
 
 [node name="Player" parent="." instance=ExtResource("1_itwyn")]
-position = Vector2(1, -1)
+position = Vector2(119, -14)
 collision_layer = 3
 collision_mask = 3
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Top" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+shape = SubResource("WorldBoundaryShape2D_8fg3t")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+shape = SubResource("WorldBoundaryShape2D_ettxn")
+
+[node name="Left" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_0wll7")
+
+[node name="Right" type="StaticBody2D" parent="."]
+rotation = -1.5708
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+shape = SubResource("WorldBoundaryShape2D_u1ias")
