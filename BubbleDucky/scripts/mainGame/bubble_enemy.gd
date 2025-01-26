@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var _animated_sprite = $Anim
 var damage = 15
+var exp = 20
 var speed = 250
 var player
 
@@ -25,6 +26,10 @@ func set_damage(number):
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	area.get_parent().do_damage(damage)
 	$Anim.play("pop")
+	
+	# Give experience to player
+	area.get_parent().get_exp(exp)
+	
 	$PopTimer.start()
 	
 
