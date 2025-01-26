@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b0ok2o7ax35lh"]
 
 [ext_resource type="Texture2D" uid="uid://bfatjfjrmfh1v" path="res://assets/ducky/BubbleDuck.png" id="1_0n16c"]
-[ext_resource type="Script" path="res://player.gd" id="1_swl2g"]
+[ext_resource type="Script" path="res://scripts/mainGame/player.gd" id="1_swl2g"]
 [ext_resource type="PackedScene" uid="uid://mgxj8nsutm4v" path="res://shooter.tscn" id="2_xj04y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sf8i2"]
