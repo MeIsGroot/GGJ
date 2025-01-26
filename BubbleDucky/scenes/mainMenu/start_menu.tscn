@@ -1,21 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bw1h07523eteq"]
+[gd_scene load_steps=13 format=3 uid="uid://bw1h07523eteq"]
 
 [ext_resource type="Script" path="res://scripts/mainMenu/start_menu.gd" id="1_ahxd5"]
 [ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_kk16u"]
-[ext_resource type="Texture2D" uid="uid://ddfxir1oflorj" path="res://assets/backgrounds/WaterBG.png" id="2_y3rde"]
+[ext_resource type="Texture2D" uid="uid://dbp8p5r0io2w5" path="res://assets/backgrounds/WaterBG.png" id="2_y3rde"]
+[ext_resource type="Texture2D" uid="uid://dsft7l6e62d8g" path="res://assets/bubble/BubbleEnemy.png" id="3_yiwjv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_np0db"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_su133"]
 texture = ExtResource("2_y3rde")
-texture_region_size = Vector2i(320, 320)
-0:0/animation_columns = 1
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
+texture_region_size = Vector2i(160, 160)
 0:0/0 = 0
-0:2/0 = 0
+0:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_st5km"]
-tile_size = Vector2i(320, 320)
-sources/0 = SubResource("TileSetAtlasSource_np0db")
+[sub_resource type="TileSet" id="TileSet_drd3x"]
+tile_size = Vector2i(160, 160)
+sources/0 = SubResource("TileSetAtlasSource_su133")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxmn4"]
 bg_color = Color(0.442836, 0.598377, 0.88283, 1)
@@ -23,6 +21,21 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoc5f"]
+atlas = ExtResource("3_yiwjv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skk3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoc5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttd0c"]
 atlas = ExtResource("2_kk16u")
@@ -55,10 +68,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ahxd5")
 
-[node name="WaterBG" type="TileMapLayer" parent="."]
-scale = Vector2(3, 3)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0)
-tile_set = SubResource("TileSet_st5km")
+[node name="waterBG" type="TileMapLayer" parent="."]
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_drd3x")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -93,14 +106,66 @@ text = "Quit
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 577.0
-offset_top = 144.0
-offset_right = 908.0
-offset_bottom = 227.0
+offset_left = 448.0
+offset_top = 157.0
+offset_right = 779.0
+offset_bottom = 240.0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "Bubble Ducky"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Bubble" type="AnimatedSprite2D" parent="."]
+position = Vector2(541, 403)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble2" type="AnimatedSprite2D" parent="."]
+position = Vector2(666, 297)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble3" type="AnimatedSprite2D" parent="."]
+position = Vector2(552, 484)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble4" type="AnimatedSprite2D" parent="."]
+position = Vector2(479, 452)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble5" type="AnimatedSprite2D" parent="."]
+position = Vector2(590, 558)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble6" type="AnimatedSprite2D" parent="."]
+position = Vector2(751, 592)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble8" type="AnimatedSprite2D" parent="."]
+position = Vector2(665, 582)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble9" type="AnimatedSprite2D" parent="."]
+position = Vector2(506, 551)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble7" type="AnimatedSprite2D" parent="."]
+position = Vector2(752, 290)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
+
+[node name="Bubble10" type="AnimatedSprite2D" parent="."]
+position = Vector2(594, 340)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skk3r")
 
 [node name="BubbleDucky" type="AnimatedSprite2D" parent="."]
 position = Vector2(718, 401)
