@@ -10,12 +10,14 @@ var min_margin = 3000
 
 func _ready() -> void:
 	count = 0
+	Difficulty.max_count=10
+	Difficulty.spawn_interval=1
 	timer.timeout.connect(_on_timeout)
-	timer.start()  # Ensure the timer starts if not already configured in the editor
+	timer.start(Difficulty.spawn_interval)  # Ensure the timer starts if not already configured in the editor
 
 func _on_timeout():
 	player = $Player
-	if count < 50:
+	if count < Difficulty.max_count:
 		# Generate spawn position outside the viewable area
 		var posx = player.global_position.x
 		var posy = player.global_position.y
@@ -39,7 +41,15 @@ func _on_timeout():
 		
 		# Increment the counter and restart the timer
 		count += 1
-		timer.start()
+		
+		Difficulty.spawn_interval-=0.01
+		Difficulty.max_count+=1
+		if Difficulty.spawn_interval < 0.1:
+			Difficulty.spawn_interval = 0.1
+						
+		timer.start(Difficulty.spawn_interval)
+		print(Difficulty.max_count)
+		print(Difficulty.spawn_interval)
 	else:
 		pass
 		

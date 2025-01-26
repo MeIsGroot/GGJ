@@ -15,6 +15,10 @@ run/main_scene="res://scenes/mainMenu/start_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Difficulty="*res://global/Difficulty.gd"
+
 [input]
 
 KEY_A={
