@@ -9,9 +9,11 @@ texture = ExtResource("2_wn44c")
 texture_region_size = Vector2i(160, 160)
 0:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, -80, 80, -80, 80, 80, -80, 80)
 
 [sub_resource type="TileSet" id="TileSet_ena7p"]
 tile_size = Vector2i(160, 160)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0h0by")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8fg3t"]
