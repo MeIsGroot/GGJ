@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7d40rq3lde6v"]
+
+[ext_resource type="Script" path="res://scripts/mainGame/player.gd" id="1_xjyep"]
+[ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_8e235"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nfp8"]
+atlas = ExtResource("2_8e235")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8j7p"]
+atlas = ExtResource("2_8e235")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trlda"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nfp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8j7p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_xjyep")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+texture_filter = 1
+scale = Vector2(6.19531, 6.19531)
+sprite_frames = SubResource("SpriteFrames_trlda")
+
+[node name="Health" type="ProgressBar" parent="."]
+offset_left = -233.0
+offset_top = 236.0
+offset_right = 236.0
+offset_bottom = 287.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-52, -20, -39, 27, 44, 21, 59, -13, 34, -38)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-50, -19, -38, 25, 43, 19, 57, -13, 33, -37)
