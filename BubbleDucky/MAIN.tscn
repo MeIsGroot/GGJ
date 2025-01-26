@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh41dsn30kkcf"]
+[gd_scene load_steps=2 format=3 uid="uid://dh41dsn30kkcf"]
 
 [ext_resource type="PackedScene" uid="uid://b0ok2o7ax35lh" path="res://Player.tscn" id="1_itwyn"]
-[ext_resource type="PackedScene" uid="uid://dg1qgr4esnkde" path="res://BUBBLE.tscn" id="2_6vlh1"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_itwyn")]
 position = Vector2(45.9006, -2.14966)
-
-[node name="Bubble" parent="." instance=ExtResource("2_6vlh1")]
-position = Vector2(-178, -156)

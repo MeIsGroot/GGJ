@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://mgxj8nsutm4v"]
+[gd_scene load_steps=5 format=3 uid="uid://mgxj8nsutm4v"]
 
-[ext_resource type="Texture2D" uid="uid://cgx0p1gjhl2bk" path="res://icon.svg" id="1_k7ie4"]
 [ext_resource type="Script" path="res://shooter.gd" id="1_oai82"]
+[ext_resource type="Texture2D" uid="uid://dpcpybviqkjpv" path="res://DevAssets/AimArrow.png" id="2_cblqe"]
+[ext_resource type="Script" path="res://marker_2d.gd" id="3_leqtp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o0rqb"]
 radius = 2500.03
@@ -10,14 +11,17 @@ radius = 2500.03
 script = ExtResource("1_oai82")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_o0rqb")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="pointer" type="Sprite2D" parent="Marker2D"]
-position = Vector2(245, -3)
-scale = Vector2(0.668701, 0.552734)
-texture = ExtResource("1_k7ie4")
+position = Vector2(151, -1.90735e-06)
+rotation = 1.5708
+scale = Vector2(2.95687, 4.12968)
+texture = ExtResource("2_cblqe")
 
 [node name="Marker2D" type="Marker2D" parent="Marker2D/pointer"]
-position = Vector2(-75.8519, -1.95313e-05)
+position = Vector2(1.77859e-06, 14.529)
+script = ExtResource("3_leqtp")
