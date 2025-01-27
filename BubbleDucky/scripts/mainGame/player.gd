@@ -52,6 +52,7 @@ func get_exp(exp):
 			if experience >= exp_increments[level]:
 				experience-=exp_increments[level]
 				level+=1
+				Difficulty.level = level
 			if level == exp_increments.size()-1:
 				experience=0.0
 		print(experience)
