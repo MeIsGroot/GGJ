@@ -5,7 +5,7 @@ var travelled_distance = 0
 var mouse_pos
 var object_pos
 var penetration = 2
-var SPEED = 1000
+var SPEED = 1500
 var RANGE = 1200
 var damage = 10
 
