@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://du8j6rupqi7r1"]
 
 [ext_resource type="Script" path="res://scripts/mainGame/bubble_enemy.gd" id="1_3107x"]
-[ext_resource type="Texture2D" uid="uid://cjsioj6der85e" path="res://assets/bubble/BubbleEnemy.png" id="2_3xg4f"]
+[ext_resource type="Texture2D" uid="uid://da4jxtxwerhyg" path="res://assets/bubble/BubbleEnemy.png" id="2_3xg4f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6rq2"]
 atlas = ExtResource("2_3xg4f")

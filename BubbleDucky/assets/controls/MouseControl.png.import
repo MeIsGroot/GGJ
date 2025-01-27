@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da4jxtxwerhyg"
-path="res://.godot/imported/BubbleEnemy.png-0cbbb19e1843016ec3e01de6f12bd1ff.ctex"
+uid="uid://cunf0fgwadoa7"
+path="res://.godot/imported/MouseControl.png-725f9445b8157864025493715356812b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bubble/BubbleEnemy.png"
-dest_files=["res://.godot/imported/BubbleEnemy.png-0cbbb19e1843016ec3e01de6f12bd1ff.ctex"]
+source_file="res://assets/controls/MouseControl.png"
+dest_files=["res://.godot/imported/MouseControl.png-725f9445b8157864025493715356812b.ctex"]
 
 [params]
 

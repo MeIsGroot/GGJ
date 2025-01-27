@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://dysymo7ptdwh2"]
+
+[ext_resource type="Script" path="res://scenes/mainMenu/controls.gd" id="1_8265j"]
+[ext_resource type="Texture2D" uid="uid://cunf0fgwadoa7" path="res://assets/controls/MouseControl.png" id="1_wav7q"]
+[ext_resource type="Texture2D" uid="uid://1561ld8fj8it" path="res://assets/controls/KeyboardControls.png" id="2_83yo0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdscy"]
+bg_color = Color(0, 0.67451, 0.772549, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u3ndc"]
+texture = ExtResource("1_wav7q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_we7u8"]
+texture = ExtResource("2_83yo0")
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8265j")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tdscy")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -255.0
+offset_top = -109.0
+offset_right = 255.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Back to Main Menu"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 25.0
+offset_right = 934.0
+offset_bottom = 384.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u3ndc")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 10.0
+offset_right = 538.0
+offset_bottom = 364.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_we7u8")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 705.0
+offset_top = 321.0
+offset_right = 859.0
+offset_bottom = 390.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "Shoot!"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 279.0
+offset_top = 443.0
+offset_right = 872.0
+offset_bottom = 512.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "Dont Touch the Bubbles!"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 322.0
+offset_right = 431.0
+offset_bottom = 391.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "Move!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

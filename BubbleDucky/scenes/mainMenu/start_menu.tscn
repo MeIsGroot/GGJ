@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/mainMenu/start_menu.gd" id="1_ahxd5"]
 [ext_resource type="Texture2D" uid="uid://d0bhwa2e3dlvi" path="res://assets/ducky/BubbleDuck.png" id="2_kk16u"]
 [ext_resource type="Texture2D" uid="uid://dbp8p5r0io2w5" path="res://assets/backgrounds/WaterBG.png" id="2_y3rde"]
+[ext_resource type="Texture2D" uid="uid://da4jxtxwerhyg" path="res://assets/bubble/BubbleEnemy.png" id="3_xyghk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_su133"]
 texture = ExtResource("2_y3rde")
@@ -21,18 +22,15 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bmola"]
-load_path = "res://.godot/imported/BubbleEnemy.png-0cbbb19e1843016ec3e01de6f12bd1ff.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eoc5f"]
-atlas = SubResource("CompressedTexture2D_bmola")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cumva"]
+atlas = ExtResource("3_xyghk")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_skk3r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eoc5f")
+"texture": SubResource("AtlasTexture_cumva")
 }],
 "loop": true,
 "name": &"default",
@@ -77,10 +75,10 @@ tile_set = SubResource("TileSet_drd3x")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-offset_left = 71.0
-offset_top = 63.0
-offset_right = 378.0
-offset_bottom = 343.0
+offset_left = 77.0
+offset_top = 284.0
+offset_right = 384.0
+offset_bottom = 564.0
 theme_override_constants/separation = 20
 
 [node name="Start" type="Button" parent="VBoxContainer"]
@@ -96,7 +94,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qxmn4")
-text = "Options"
+text = "Controls"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -108,13 +106,14 @@ text = "Quit
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 157.0
-offset_right = 779.0
-offset_bottom = 240.0
-theme_override_constants/outline_size = 5
-theme_override_constants/shadow_outline_size = 5
-theme_override_font_sizes/font_size = 50
+offset_left = 193.0
+offset_top = 83.0
+offset_right = 657.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(1, 0.905882, 0.298039, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 70
 text = "Bubble Ducky"
 horizontal_alignment = 1
 vertical_alignment = 1
