@@ -45,6 +45,7 @@ scale = Vector2(6.19531, 6.19531)
 sprite_frames = SubResource("SpriteFrames_trlda")
 
 [node name="Health" type="ProgressBar" parent="."]
+texture_filter = 4
 offset_left = -233.0
 offset_top = 236.0
 offset_right = 236.0
@@ -52,6 +53,7 @@ offset_bottom = 287.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 30
 theme_override_styles/fill = SubResource("StyleBoxFlat_4x3r4")
+value = 60.0
 allow_greater = true
 allow_lesser = true
 show_percentage = false
@@ -69,6 +71,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="Experience" type="ProgressBar" parent="."]
+texture_filter = 6
 offset_left = -198.0
 offset_top = 294.0
 offset_right = 198.0
@@ -76,11 +79,13 @@ offset_bottom = 321.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 20
 theme_override_styles/fill = SubResource("StyleBoxFlat_uorsb")
+value = 60.0
 allow_greater = true
 allow_lesser = true
 show_percentage = false
 
 [node name="Level" type="Label" parent="."]
+texture_filter = 4
 offset_left = -176.0
 offset_top = 337.0
 offset_right = -112.0
@@ -88,3 +93,4 @@ offset_bottom = 474.0
 theme_override_colors/font_color = Color(0.894118, 0.741176, 0, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 100
+text = "Level: 1"
