@@ -49,10 +49,12 @@ offset_left = -233.0
 offset_top = 236.0
 offset_right = 236.0
 offset_bottom = 287.0
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 30
 theme_override_styles/fill = SubResource("StyleBoxFlat_4x3r4")
 allow_greater = true
 allow_lesser = true
+show_percentage = false
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -71,16 +73,18 @@ offset_left = -198.0
 offset_top = 294.0
 offset_right = 198.0
 offset_bottom = 321.0
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 20
 theme_override_styles/fill = SubResource("StyleBoxFlat_uorsb")
 allow_greater = true
 allow_lesser = true
+show_percentage = false
 
 [node name="Level" type="Label" parent="."]
 offset_left = -176.0
 offset_top = 337.0
 offset_right = -112.0
 offset_bottom = 474.0
-theme_override_colors/font_color = Color(0.744632, 0, 0.205046, 1)
-theme_override_constants/outline_size = 10
+theme_override_colors/font_color = Color(0.894118, 0.741176, 0, 1)
+theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 100

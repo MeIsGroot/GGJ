@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dysymo7ptdwh2"]
+[gd_scene load_steps=9 format=3 uid="uid://dysymo7ptdwh2"]
 
 [ext_resource type="Script" path="res://scenes/mainMenu/controls.gd" id="1_8265j"]
 [ext_resource type="Texture2D" uid="uid://cunf0fgwadoa7" path="res://assets/controls/MouseControl.png" id="1_wav7q"]
 [ext_resource type="Texture2D" uid="uid://1561ld8fj8it" path="res://assets/controls/KeyboardControls.png" id="2_83yo0"]
+[ext_resource type="Texture2D" uid="uid://bkrakncj5ae1l" path="res://assets/controls/SpaceControl.png" id="4_4g4bt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdscy"]
 bg_color = Color(0, 0.67451, 0.772549, 1)
@@ -12,6 +13,9 @@ texture = ExtResource("1_wav7q")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_we7u8"]
 texture = ExtResource("2_83yo0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2obqe"]
+texture = ExtResource("4_4g4bt")
 
 [node name="settings" type="Control"]
 layout_mode = 3
@@ -49,31 +53,22 @@ text = "Back to Main Menu"
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 637.0
-offset_top = 25.0
-offset_right = 934.0
-offset_bottom = 384.0
+offset_left = 541.0
+offset_top = 23.0
+offset_right = 838.0
+offset_bottom = 382.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_u3ndc")
 
 [node name="Panel3" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 184.0
-offset_top = 10.0
-offset_right = 538.0
-offset_bottom = 364.0
+offset_left = 94.0
+offset_top = -1.0
+offset_right = 448.0
+offset_bottom = 353.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_we7u8")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 705.0
-offset_top = 321.0
-offset_right = 859.0
-offset_bottom = 390.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 50
-text = "Shoot!"
-
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 279.0
 offset_top = 443.0
 offset_right = 872.0
@@ -85,13 +80,43 @@ text = "Dont Touch the Bubbles!"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 285.0
-offset_top = 322.0
-offset_right = 431.0
-offset_bottom = 391.0
+offset_left = 197.0
+offset_top = 326.0
+offset_right = 343.0
+offset_bottom = 395.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 50
 text = "Move!"
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 797.0
+offset_top = 57.0
+offset_right = 1148.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2obqe")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 758.0
+offset_top = 179.0
+offset_right = 823.0
+offset_bottom = 248.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "or
+"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 319.0
+offset_right = 952.0
+offset_bottom = 388.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "Shoot!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

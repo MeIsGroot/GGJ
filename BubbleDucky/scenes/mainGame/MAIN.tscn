@@ -71,4 +71,5 @@ collision_mask = 3
 shape = SubResource("WorldBoundaryShape2D_u1ias")
 
 [node name="Player" parent="." instance=ExtResource("1_itwyn")]
+z_index = 3
 position = Vector2(308.97, 102.754)
